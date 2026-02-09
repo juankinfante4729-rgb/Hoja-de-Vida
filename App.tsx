@@ -27,16 +27,16 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 px-4 sm:px-6 lg:px-8 print:p-0 print:bg-white">
+    <div className="min-h-screen bg-gray-100 py-6 px-3 sm:py-8 sm:px-6 lg:px-8 print:p-0 print:bg-white">
       {/* Print Controls (Hidden when printing) */}
-      <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-4 print:hidden">
+      <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 flex flex-col gap-4 print:hidden">
         <button 
           onClick={handlePrint}
-          className="bg-slate-850 text-white p-4 rounded-full shadow-xl hover:bg-slate-700 transition-all flex items-center gap-2 group border border-slate-700"
+          className="bg-slate-850 text-white p-3 md:p-4 rounded-full shadow-xl hover:bg-slate-700 transition-all flex items-center gap-2 group border border-slate-700"
           title="Guardar como PDF"
         >
           <Icon name="Download" size={24} />
-          <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap font-medium pl-0 group-hover:pl-2">
+          <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap font-medium pl-0 group-hover:pl-2 text-sm md:text-base">
             Guardar PDF
           </span>
         </button>
@@ -50,10 +50,10 @@ const App: React.FC = () => {
         {/* ATS BEST PRACTICE: Use a standard flow in print (Top to Bottom). 
             We force display:block in print to stack columns sequentially instead of side-by-side. 
         */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8 md:p-12 print:p-8 print:pt-4 print:gap-6 print:block">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-5 md:p-12 print:p-8 print:pt-4 print:gap-6 print:block">
           
           {/* Main Content (Left Column) */}
-          <div className="lg:col-span-2 space-y-10 order-2 lg:order-1 print:mb-6">
+          <div className="lg:col-span-2 space-y-8 md:space-y-10 order-2 lg:order-1 print:mb-6">
             
             {/* Professional Summary */}
             <section className="print:break-inside-avoid print:mb-6">
@@ -61,7 +61,7 @@ const App: React.FC = () => {
                 <Icon name="Award" size={16} />
                 Perfil Profesional
               </h2>
-              <p className="text-gray-700 leading-relaxed text-lg text-justify print:text-base print:text-slate-800">
+              <p className="text-gray-700 leading-relaxed text-base md:text-lg text-justify print:text-base print:text-slate-800">
                 {PROFILE.summary}
               </p>
             </section>
@@ -78,7 +78,7 @@ const App: React.FC = () => {
           </div>
 
           {/* Sidebar (Right Column) - In print, this will stack BELOW the main content */}
-          <div className="lg:col-span-1 space-y-8 order-1 lg:order-2 print:space-y-6">
+          <div className="lg:col-span-1 space-y-6 md:space-y-8 order-1 lg:order-2 print:space-y-6">
             
             {/* Skills */}
             <div className="print:break-inside-avoid">

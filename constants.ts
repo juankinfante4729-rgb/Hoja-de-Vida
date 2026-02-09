@@ -8,6 +8,7 @@ export const PROFILE = {
   phone: "+593 99 540 3148",
   location: "Quito, Ecuador",
   linkedin: "linkedin.com/in/juan-infante-402b6197",
+  image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
   // BEST PRACTICE: Resumen que explica "Vibe Coding" en lenguaje corporativo (aceleración, enfoque en resultados)
   summary: "Ingeniero en Sistemas y Especialista en Transformación Digital con más de 16 años de trayectoria. Enfocado en la adopción estratégica de Inteligencia Artificial Generativa y paradigmas de 'Vibe Coding' para acelerar el desarrollo de software y la automatización de procesos. Poseo una profunda experiencia técnica en la administración de plataformas Core de Telecomunicaciones (Mediación, Facturación, Tasación, Roaming). Experto en cerrar la brecha entre Negocio y TI, evolucionando de la administración de sistemas críticos hacia ecosistemas de automatización inteligente (RPA + AI).",
   disabilityInfo: {

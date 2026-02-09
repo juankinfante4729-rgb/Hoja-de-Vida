@@ -1,25 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { PROFILE } from '../constants';
 import { Icon } from './Icon';
 
 export const Header: React.FC = () => {
-  // State to handle the user uploaded image
-  // Updated to a more professional business placeholder
-  const [profileImage, setProfileImage] = useState<string>("https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80");
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const imageUrl = URL.createObjectURL(file);
-      setProfileImage(imageUrl);
-    }
-  };
-
-  const triggerFileInput = () => {
-    fileInputRef.current?.click();
-  };
-
   // Helper to display clean URL (removes https://)
   const displayUrl = (url: string) => url.replace(/^https?:\/\/(www\.)?/, '');
 
@@ -27,46 +10,29 @@ export const Header: React.FC = () => {
     <header className="bg-slate-850 text-white p-8 md:p-12 rounded-t-lg shadow-lg relative overflow-hidden print:bg-white print:text-slate-900 print:shadow-none print:p-0 print:pb-6 print:border-b-2 print:border-slate-200">
       <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2 print:hidden"></div>
       
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative z-10">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 relative z-10">
         
-        {/* Image Container with Upload Functionality */}
-        <div className="relative group">
-          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white/20 shadow-xl overflow-hidden flex-shrink-0 bg-gray-200 cursor-pointer print:border-slate-200 print:shadow-none print:w-32 print:h-32" onClick={triggerFileInput}>
-             <img 
-              src={profileImage} 
-              alt={PROFILE.name}
-              className="w-full h-full object-cover"
-             />
-          </div>
-          
-          {/* Upload Overlay (Hidden in Print) */}
-          <button 
-            onClick={triggerFileInput}
-            className="absolute inset-0 bg-black/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 print:hidden"
-            title="Cambiar fotografía"
-          >
-            <Icon name="Camera" className="text-white" size={32} />
-          </button>
-          
-          <input 
-            type="file" 
-            ref={fileInputRef} 
-            onChange={handleImageUpload} 
-            accept="image/*" 
-            className="hidden" 
-          />
+        {/* Static Image Container */}
+        <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white/20 shadow-xl overflow-hidden flex-shrink-0 bg-gray-200 print:border-slate-200 print:shadow-none print:w-32 print:h-32">
+           <img 
+            src={PROFILE.image} 
+            alt={PROFILE.name}
+            className="w-full h-full object-cover"
+           />
         </div>
 
-        <div className="flex-1 text-center md:text-left space-y-3">
+        <div className="flex-1 text-center md:text-left space-y-3 w-full">
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2 print:text-4xl print:text-slate-900">{PROFILE.name}</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-2 print:text-4xl print:text-slate-900 leading-tight">
+              {PROFILE.name}
+            </h1>
             {/* ATS TIP: Clear Job Title with keywords */}
             <p className="text-blue-400 font-medium text-lg md:text-xl leading-snug print:text-blue-700 print:font-bold">
               {PROFILE.title}
             </p>
           </div>
           
-          <div className="flex flex-wrap justify-center md:justify-start gap-y-2 gap-x-6 text-sm text-gray-300 mt-4 print:text-slate-600 print:mt-2">
+          <div className="flex flex-wrap justify-center md:justify-start gap-y-2 gap-x-4 md:gap-x-6 text-sm text-gray-300 mt-4 print:text-slate-600 print:mt-2">
             <div className="flex items-center gap-2">
               <Icon name="MapPin" size={16} className="print:text-slate-500" />
               <span>{PROFILE.location}</span>
@@ -77,7 +43,7 @@ export const Header: React.FC = () => {
             </div>
             <div className="flex items-center gap-2">
               <Icon name="Mail" size={16} className="print:text-slate-500" />
-              <a href={`mailto:${PROFILE.email}`} className="hover:text-white transition-colors text-inherit no-underline print:text-slate-800">{PROFILE.email}</a>
+              <a href={`mailto:${PROFILE.email}`} className="hover:text-white transition-colors text-inherit no-underline print:text-slate-800 break-all sm:break-normal">{PROFILE.email}</a>
             </div>
              <div className="flex items-center gap-2">
               <Icon name="Linkedin" size={16} className="print:text-slate-500" />
@@ -86,7 +52,7 @@ export const Header: React.FC = () => {
                 href={`https://${displayUrl(PROFILE.linkedin)}`} 
                 target="_blank" 
                 rel="noreferrer"
-                className="hover:text-white transition-colors text-inherit no-underline print:text-slate-800"
+                className="hover:text-white transition-colors text-inherit no-underline print:text-slate-800 break-all sm:break-normal"
               >
                 {displayUrl(PROFILE.linkedin)}
               </a>
