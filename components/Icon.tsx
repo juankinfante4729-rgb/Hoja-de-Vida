@@ -16,7 +16,8 @@ import {
   Brain,
   Sparkles,
   Globe,
-  ScrollText
+  ScrollText,
+  BookOpen
 } from 'lucide-react';
 
 export const Icons = {
@@ -36,7 +37,8 @@ export const Icons = {
   Brain,
   Sparkles,
   Globe,
-  ScrollText
+  ScrollText,
+  BookOpen
 };
 
 interface IconProps {

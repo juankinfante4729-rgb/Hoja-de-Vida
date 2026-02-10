@@ -28,6 +28,13 @@ export interface Certification {
   year: string;
 }
 
+export interface Course {
+  id: string;
+  name: string;
+  issuer: string;
+  year: string;
+}
+
 export interface Language {
   language: string;
   level: string; // e.g., "Nativo", "C1 - Avanzado", etc.

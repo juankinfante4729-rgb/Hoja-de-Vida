@@ -5,6 +5,7 @@ import { EducationSection } from './components/EducationSection';
 import { SkillsSection } from './components/SkillsSection';
 import { DisabilityBadge } from './components/DisabilityBadge';
 import { CertificationsSection } from './components/CertificationsSection';
+import { CoursesSection } from './components/CoursesSection.tsx';
 import { LanguagesSection } from './components/LanguagesSection';
 import { PROFILE } from './constants';
 import { Icon } from './components/Icon';
@@ -90,12 +91,17 @@ const App: React.FC = () => {
               <EducationSection />
             </div>
 
-            {/* Certifications - Added here */}
+            {/* Certifications */}
             <div className="print:break-inside-avoid">
               <CertificationsSection />
             </div>
 
-            {/* Languages - Added here */}
+            {/* Courses - Added here */}
+            <div className="print:break-inside-avoid">
+              <CoursesSection />
+            </div>
+
+            {/* Languages */}
             <div className="print:break-inside-avoid">
               <LanguagesSection />
             </div>

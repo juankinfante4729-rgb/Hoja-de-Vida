@@ -1,4 +1,4 @@
-import { Experience, Education, Skill, Certification, Language } from './types';
+import { Experience, Education, Skill, Certification, Course, Language } from './types';
 
 export const PROFILE = {
   name: "Ing. Juan Carlos Infante",
@@ -7,7 +7,7 @@ export const PROFILE = {
   email: "juan_infante21@hotmail.com",
   phone: "+593 99 540 3148",
   location: "Quito, Ecuador",
-  linkedin: "linkedin.com/in/juan-infante2026",
+  linkedin: "linkedin.com/in/juan-infante-402b6197",
   image: "/Juan_Carlos.png",
   // BEST PRACTICE: Resumen que explica "Vibe Coding" en lenguaje corporativo (aceleración, enfoque en resultados)
   summary: "Ingeniero en Sistemas y Especialista en Transformación Digital con más de 16 años de trayectoria. Enfocado en la adopción estratégica de Inteligencia Artificial Generativa y paradigmas de 'Vibe Coding' para acelerar el desarrollo de software y la automatización de procesos. Poseo una sólida base técnica en administración de sistemas Unix/Linux y plataformas Core de Telecomunicaciones. Experto en Business Intelligence y en cerrar la brecha entre Negocio y TI, evolucionando de la operación crítica hacia ecosistemas de automatización inteligente (RPA + AI) y toma de decisiones basada en datos.",
@@ -95,16 +95,19 @@ export const EDUCATION: Education[] = [
 
 export const CERTIFICATIONS: Certification[] = [
   {
+    id: "scrum",
+    name: "Scrum Master Certified (SMC)",
+    issuer: "AIBES™",
+    year: "2020"
+  }
+];
+
+export const COURSES: Course[] = [
+  {
     id: "uipath",
     name: "UiPath Advanced RPA Developer (UiARD)",
     issuer: "UiPath",
     year: "2023"
-  },
-  {
-    id: "scrum",
-    name: "Scrum Master Certified (SMC)",
-    issuer: "Scrum Alliance",
-    year: "2022"
   },
   {
     id: "ms",
