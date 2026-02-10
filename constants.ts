@@ -70,7 +70,7 @@ export const EXPERIENCE: Experience[] = [
     achievements: [
       "Inicié como Administrador de la Plataforma de Roaming, asumiendo rápidamente el rol de Administrador Principal responsable de la operatividad del servicio internacional.",
       "Gestioné la configuración y monitoreo de los acuerdos de Roaming e interconexión con operadoras globales.",
-      "Digitalicé y automaticé flujos de información del área de RRHH aplicando lógica de sistemas, lo que facilitó mi transición formal al organigrama de Tecnología.",
+      "Diseñé e implementé soluciones alternativas (workarounds) y automatizaciones en las plataformas de Producción TI, resolviendo limitaciones del sistema y validando mi perfil técnico para la transición formal al área de Tecnología.",
       "Participé activamente en proyectos de integración de plataformas móviles, demostrando solvencia técnica en entornos de alta disponibilidad."
     ]
   }
@@ -103,14 +103,8 @@ export const CERTIFICATIONS: Certification[] = [
   {
     id: "scrum",
     name: "Scrum Master Certified (SMC)",
-    issuer: "AIBES",
-    year: "2020"
-  },
-  {
-    id: "itil",
-    name: "ITIL 4 Foundation",
-    issuer: "Axelos",
-    year: "2020"
+    issuer: "Scrum Alliance",
+    year: "2022"
   },
   {
     id: "ms",
@@ -151,7 +145,11 @@ export const SKILLS: Skill[] = [
     items: ["UiPath (Dev & Admin)", "Automation Anywhere", "Power Automate Desktop", "Orquestación de Bots", "Document Understanding"]
   },
   {
-    category: "Gestión & Estrategia",
-    items: ["Nexo Negocio-TI", "Agile & Scrum", "ITIL", "Gestión del Cambio", "Liderazgo Técnico"]
+    category: "Gestión & Metodologías",
+    items: ["Agile & Scrum", "ITIL 4", "Gestión de Proyectos", "Mejora de Procesos", "Liderazgo Técnico"]
+  },
+  {
+    category: "Habilidades Blandas",
+    items: ["Liderazgo Adaptativo", "Resiliencia Profesional", "Comunicación Efectiva", "Pensamiento Crítico", "Resolución de Problemas", "Aprendizaje Continuo"]
   }
 ];

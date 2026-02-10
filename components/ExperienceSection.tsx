@@ -18,9 +18,10 @@ export const ExperienceSection: React.FC = () => {
             {/* Timeline dot */}
             <div className={`absolute -left-[9px] top-1 w-5 h-5 rounded-full border-4 border-white ${job.isCurrent ? 'bg-blue-600' : 'bg-slate-300'}`}></div>
             
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
-              <h3 className="text-xl font-bold text-slate-800">{job.role}</h3>
-              <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-1 sm:mt-0 w-fit">
+            <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-2 gap-2">
+              <h3 className="text-xl font-bold text-slate-800 leading-tight">{job.role}</h3>
+              {/* Fixed width for date badges to ensure consistency regardless of content length */}
+              <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full min-w-[160px] text-center whitespace-nowrap border border-blue-100 flex-shrink-0 shadow-sm">
                 {job.period}
               </span>
             </div>
