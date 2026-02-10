@@ -119,7 +119,7 @@ const App: React.FC = () => {
 
         {/* Footer for print */}
         <div className="bg-slate-50 p-6 text-center text-gray-400 text-sm border-t border-slate-100 print:block hidden print:bg-white print:border-none print:pt-4">
-          <p>&copy; {new Date().getFullYear()} {PROFILE.name} - Documento generado digitalmente.</p>
+          <p>&copy; {new Date().getFullYear()} {PROFILE.name}</p>
         </div>
       </main>
 

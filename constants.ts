@@ -7,7 +7,7 @@ export const PROFILE = {
   email: "juan_infante21@hotmail.com",
   phone: "+593 99 540 3148",
   location: "Quito, Ecuador",
-  linkedin: "linkedin.com/in/juan-infante-402b6197",
+  linkedin: "linkedin.com/in/juan-infante2026",
   image: "/Juan_Carlos.png",
   // BEST PRACTICE: Resumen que explica "Vibe Coding" en lenguaje corporativo (aceleración, enfoque en resultados)
   summary: "Ingeniero en Sistemas y Especialista en Transformación Digital con más de 16 años de trayectoria. Enfocado en la adopción estratégica de Inteligencia Artificial Generativa y paradigmas de 'Vibe Coding' para acelerar el desarrollo de software y la automatización de procesos. Poseo una sólida base técnica en administración de sistemas Unix/Linux y plataformas Core de Telecomunicaciones. Experto en Business Intelligence y en cerrar la brecha entre Negocio y TI, evolucionando de la operación crítica hacia ecosistemas de automatización inteligente (RPA + AI) y toma de decisiones basada en datos.",
@@ -81,14 +81,14 @@ export const EDUCATION: Education[] = [
     id: "mba",
     degree: "Máster en Administración de Empresas (MBA)",
     institution: "Universidad Politécnica de Madrid",
-    year: "Finalizado",
+    year: "Octubre 2024",
     details: "Especialización en Gestión Estratégica y Dirección de Tecnología."
   },
   {
     id: "ing",
     degree: "Ingeniero en Sistemas con mención en Informática para la gestión",
     institution: "Universidad Politécnica Salesiana",
-    year: "Finalizado",
+    year: "Septiembre 2021",
     details: "Mención de honor por excelencia académica."
   }
 ];

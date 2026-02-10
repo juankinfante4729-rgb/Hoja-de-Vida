@@ -3,6 +3,31 @@ import { EXPERIENCE } from '../constants';
 import { Icon } from './Icon';
 
 export const ExperienceSection: React.FC = () => {
+
+  // Function to detect URLs in text and return clickable elements
+  const renderWithLinks = (text: string) => {
+    // Regex to detect URLs starting with http:// or https://
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const parts = text.split(urlRegex);
+
+    return parts.map((part, i) => {
+      if (part.match(urlRegex)) {
+        return (
+          <a 
+            key={i} 
+            href={part} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-blue-600 underline hover:text-blue-800 break-all"
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   return (
     <div className="space-y-8">
       <div className="flex items-center gap-3 mb-6">
@@ -37,7 +62,7 @@ export const ExperienceSection: React.FC = () => {
                 {job.achievements.map((achievement, index) => (
                   <li key={index} className="flex items-start gap-2 text-gray-700 text-sm">
                     <span className="mt-1.5 w-1.5 h-1.5 bg-slate-400 rounded-full flex-shrink-0"></span>
-                    <span>{achievement}</span>
+                    <span>{renderWithLinks(achievement)}</span>
                   </li>
                 ))}
               </ul>
